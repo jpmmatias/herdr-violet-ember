@@ -6,8 +6,8 @@ agent list, tabs and split terminals.
 
 ![Violet Ember](preview.png)
 
-Release preparation: `preview.png` must be captured from the running layout
-before publication. The supplied SVG is only a palette illustration.
+`preview.png` shows Herdr running the theme; `preview.gif` contains the recorded
+preview. The SVG is a separate palette illustration.
 
 ## What you see
 
@@ -38,8 +38,10 @@ The root row contains sidebar and work columns. Sidebar blocks use
 `workspace-chrome` (brand and footer, the latter with `footer: true`), `spaces`,
 and `agents`. Work contains `tabs`, a row with the active tab and optional
 files/changes stack, and `workspace-status`. Pane headers use `pane`.
-All these mods ship with Herdr; none are bundled or modified here. This package
+All these mods ship with Herdr; none are bundled or modified here. The installed layout
 adds no executable code, external programs, network requests or custom art.
+The optional `tools/record-preview.py` development utility uses `herdr-app` and
+FFmpeg to record previews; it is not part of the installed layout.
 
 ## Watch out
 
@@ -60,5 +62,6 @@ VS Code syntax italics are not represented by this color theme.
 - ANSI errors are coral, successes green, and normal terminal text is readable.
 - A real screenshot is saved as `preview.png` after live verification.
 
-Only static checks have been completed during preparation; live checks and the
-screenshot remain outstanding because the running app connection was blocked.
+The JSON and shipped mod dependencies passed static checks. The preview was
+recorded by the author in Herdr. The interaction checklist above remains the
+manual release verification guide.

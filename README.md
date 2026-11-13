@@ -1,11 +1,13 @@
 # Violet Ember for Herdr desktop
 
-Adapts its terminal palette with coral errors, brighter ANSI gray, purple
+A dark violet theme with coral errors, readable terminal colors, purple
 navigation accents, pink primary buttons and green success indicators.
 Selected rows and terminal selections use a stronger purple than hover states.
 Secondary text and borders are brighter for readability.
 
-[View the illustrative palette preview](preview.svg). This is not a live app screenshot.
+![Violet Ember preview](preview.gif)
+
+*Recorded in Herdr desktop.*
 
 Foreground, muted, dim and accent text were checked against every configured UI
 surface: all exceed 4.5:1 contrast. Primary button text also exceeds 4.5:1.
@@ -41,19 +43,34 @@ The theme is named after the layout, so Herdr may offer it only within that layo
 For theme-only use on another layout, set that layout's root `theme` to
 `"violet-ember"`.
 
-## Community release status
+## Record a live preview
 
-Prepared locally; not published. Before publishing:
+Select Violet Ember in Herdr, open a demo workspace without private content,
+then run from this repository:
 
-1. Install and select the matching layout; verify navigation, split panes,
-   agent statuses, terminal colors and selected rows in the live app.
-2. Capture a real screenshot from the package folder with
-   `herdr-app shot preview.png`. Avoid exposing private terminal content.
-   `preview.svg` is an illustration, not the gallery screenshot.
-3. Publish this folder as the root of a public repository such as
-   `herdr-violet-ember`, retaining the licenses and attribution.
-4. Add the GitHub topic `herdr-layout` for discovery by the
-   [Herdr gallery](https://herdr.dev/gallery/).
+```sh
+python3 tools/record-preview.py
+```
+
+During the eight-second capture, hover and select rows, switch tabs, or show
+colored terminal output. The script records only Herdr's window, without audio.
+It requires `herdr-app`, Python 3, and FFmpeg on your PATH.
+
+After a successful capture, it saves `preview.gif` for this README and
+`preview.png` for the gallery, then switches the embedded preview to the GIF.
+Review both files before publishing. To capture a longer clip:
+
+```sh
+python3 tools/record-preview.py --seconds 12 --fps 8
+```
+
+## Community gallery
+
+This package includes a matching layout, its recipe, a recorded GIF and a real
+Herdr screenshot. The `herdr-layout` repository topic makes it discoverable by
+the [Herdr gallery](https://herdr.dev/gallery/).
+
+## Credits
 
 The optional layout derives from Herdr's main layout (Apache-2.0; see `LICENSE-HERDR`).
 The layout modification adds the Violet Ember theme selection. Original
