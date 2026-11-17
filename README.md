@@ -35,13 +35,23 @@ terminal applications control their own text styling.
 The included layout adapts Herdr's shipped main layout and uses its built-in
 mods. It requires a Herdr desktop version with `workspace-chrome`, `spaces`,
 `agents`, `tabs`, `pane`, `files`, `changes`, and `workspace-status` installed.
-No custom mod code is included.
+This layout uses no custom mod code. Only the optional Ember Companion layout
+below adds mods.
 
 Copy `layouts/violet-ember.json` from this package into
 `~/.config/herdr-app/layouts/`, then choose Violet Ember in the layout switcher.
 The theme is named after the layout, so Herdr may offer it only within that layout.
 For theme-only use on another layout, set that layout's root `theme` to
 `"violet-ember"`.
+
+## Companion layout
+
+[Ember Companion](COMPANION.md) is a second Violet Ember layout with Ember,
+a floating companion who announces agent updates. It also adds a Tasks sidebar,
+activity history, snooze and quiet controls, and a focus timer, in English or
+Portuguese. See [COMPANION.md](COMPANION.md) for installation and details.
+
+<img src="layouts/ember-companion.png" alt="Ember companion in Herdr" width="240">
 
 ## Record a live preview
 
